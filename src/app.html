@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%svelte.head%
+
+		<style>
+			
+			@font-face {
+				font-family: 'Circular Std';
+				src: url("/fonts/CircularStd/Circular Std Book.ttf");
+			}
+	
+			@font-face {
+				font-family: 'Circular Std Bold';
+				src: url("/fonts/CircularStd/Circular Std Bold.ttf");
+			}
+	
+			body, h1, h2, h3, h4, h5, h6 {
+	
+				font-family: 'Circular Std Bold', sans-serif;
+			}
+			.scrollbar::-webkit-scrollbar {
+				width: 8px;
+				height: 8px;
+				display: none;
+			}
+			.scrollbar::-webkit-scrollbar-track {
+				background-color: rgba(0, 0, 0, 0);
+				border-radius: 10px;
+			}
+			.scrollbar::-webkit-scrollbar-thumb {
+				background-color: #dfdfdf02;
+				border-radius: 10px;
+			}
+		
+			tr td {
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				padding-left: 1rem;
+				padding-right: 1rem
+			}
+		
+			tr th {
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			div{
+				font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+			}
+		</style>
+	</head>
+	<body>
+		<div id="svelte">%svelte.body%</div>
+
+		<script>
+			window.addEventListener('keyup', function (event) {
+				if (event.ctrlKey && event.altKey && event.code === 'KeyR') {
+					window.location.href = '/results';
+				}
+			});
+
+		</script>
+	</body>
+	
+</html>
